@@ -47,7 +47,7 @@
                <div class="span3">
                   <!-- Logo starts -->
                   <div class="logo">
-                     <div class="logo-image"> <a href="indexpsvt.html"><img src="img/logofullcolor.png" alt="petsvingsVT"></a> </div>
+                     <div class="logo-image"> <a href="indexpsvt.html"><img src="img/logofullcolor.png" alt="petsavingsVT logo"/></a> </div>
                      <div class="clearfix"></div>
                   </div>
                   <!-- Logo ends -->
@@ -64,10 +64,10 @@
                               <!-- Sub Navigation -->
                               <ul id="ddsubmenu2" class="ddsubmenustyle">
                                  <li><a href="sb.html"><i class="icon-angle-right"></i>South Burlington</a></li>
-                                 <li><a href="williston.html"><i class="icon-angle-right"></i>Williston</a></li>
-                                 <li><a href="essex.html"><i class="icon-angle-right"></i>Essex</a></li>
-                                 <li><a href="colchester.html"><i class="icon-angle-right"></i>Colchester</a></li>
-                                 <li><a href="post.html"><i class="icon-angle-right bgreen"></i> &nbsp; &nbsp;Post a Deal!</a></li>
+                                 <li><a href="comingsoon.html"><i class="icon-angle-right"></i>Williston</a></li>
+                                 <li><a href="comingsoon.html"><i class="icon-angle-right"></i>Essex</a></li>
+                                 <li><a href="comingsoon.html"><i class="icon-angle-right"></i>Colchester</a></li>
+                                 <li><a href="post.html"><i class="icon-angle-right bgreen"></i> Post a Deal!</a></li>
                               </ul>
                            </li>
                            <!-- Main navigation -->
@@ -127,7 +127,7 @@
                      ?></h2>
                   <a href="indexpsvt.com"> Back to Home/Signup Page </a>
                   <h3>Want to see some deals now??</h3>
-                  <p>South Burlington</p>
+                  <p><a href="sb.html">South Burlington</a></p>
                   <p>Williston</p>
                   <p>Essex </p>
                   <p>Colchester</p>
@@ -142,7 +142,7 @@
       <!-- Footer --> 
       <!--banner-->
       <div class="foot">
-         <img src="img/banner.png" alt="animals"> 
+         <img src="img/banner.png" alt="animals in banner"/> 
       </div>
       <!--banner ends-->
       <footer>

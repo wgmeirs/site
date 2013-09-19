@@ -4,7 +4,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta charset="utf-8">
       <!-- Title and other stuffs -->
-      <title>petsavingsVT - Contact Us</title>
+      <title>petsavingsVT - post a deal!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
       <meta name="keywords" content="">
@@ -94,74 +94,52 @@
                -->
             <div class="row-fluid span12">
                <div class="span5">
-                  <h2>Contact Us</h2>
-                  <div class="form">
-                     <!-- Contact form-->
-                     <form class="form-horizontal" action="contact.php" method="post">
-                        <!-- Name -->
-                        <div class="control-group">
-                           <label class="control-label" for="name">Name</label>
-                           <div class="controls">
-                              <input type="text" class="input-medium" name="name" id="name">
-                           </div>
-                        </div>
-                        <!-- Email -->
-                        <div class="control-group">
-                           <label class="control-label" for="email">Email</label>
-                           <div class="controls">
-                              <input type="text" class="input-medium" name="email" id="email" placeholder="email address">
-                           </div>
-                        </div>
-                        <!-- phone -->
-                        <div class="control-group">
-                           <label class="control-label" for="phone">Phone</label>
-                           <div class="controls">
-                              <input type="text" class="input-medium" name="phone" id="phone" placeholder="(000)000-0000">
-                           </div>
-                        </div>
-                        <!-- Comment -->
-                        <div class="control-group">
-                           <label class="control-label" for="comment">Message</label>
-                           <div class="controls">
-                              <textarea class="input-medium" id="comment" name="message" rows="3"></textarea>
-                           </div>
-                        </div>
-                        <!-- Buttons -->
-                        <div class="form-actions">
-                           <!-- Buttons -->
-                           <button type="submit" class="btn btn-warning pull-right">Submit</button>
-                        </div>
-                     </form>
-                  </div>
+                 <?php
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$temp = explode(".", $_FILES["file"]["name"]);
+$extension = end($temp);
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/jpg")
+|| ($_FILES["file"]["type"] == "image/pjpeg")
+|| ($_FILES["file"]["type"] == "image/x-png")
+|| ($_FILES["file"]["type"] == "image/png"))
+&& ($_FILES["file"]["size"] < 80000)
+&& in_array($extension, $allowedExts))
+  {
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    }
+  else
+    {
+    echo "Thanks for your file!" ."<br>";
+	echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    
+
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "uploads/" . $_FILES["file"]["name"]);
+      }
+    }
+  }
+else
+  {
+  echo "Invalid file";
+  }
+?> 
+
+
+              </div>
                   <!--begin media  --><!--end media-->
                </div>
-               <!--content box-->
-               <div class="span5 offset2">
-                  <div class="contBox">
-                     <h2>News</h2>
-                     <h4>Essex Dog Park Grand Opening!</h4>
-                     <p>It's Finally Here! Essex Dog Park will be celebrating its Grand Opening this Saturday, June 29th from 10am to noon. </p>
-                     <p>We will have a leash cutting ceremony, refreshments and a treat, for both you and your pup! We hope you and your dog(s) can be there to celebrate with us as our park transistions from the planning stages to dogs running and playing.          </p>
-                     <p>Also if you havn't already please like us on our Facebook Page <a href="http://facebook.com/EssexDogPark">www.facebook.com/EssexDogPark </a>to stay up to date with all the latest information, news, and pictures from the park!</p>
-                     <div class="media">
-                        <div class="media-body">
-                        </div>
-                        <a class="pull-right" href="#">
-                        <img class="media-object" src="img/newsdoggie.gif" alt="dog">
-                        </a>
-                     </div>
-                  </div>
-                  <div class="span12">
-                     <h4>Find, Follow and Like!</h4>
-                     <ul id="gallery_photos">
-                        <li><a href="http://linkedin.com/in/billmeirsrecruiter/"><img src="img/linkedin.gif" alt="Linkedin"/></a></li>
-                        <li><a href="https://www.facebook.com/bmeirs"><img src="img/facebook.gif" alt="Facebook"/></a></li>
-                        <li><a href="http://twitter.com/wgmeirs"><img src="img/twitter.gif" alt="Twitter"/></a></li>
-                        <li><a href="https://plus.google.com/u/0/116834960053162148377/posts"><img src="img/google.gif" alt="Google"/></a></li>
-                     </ul>
-                  </div>
-               </div>
-               <!--end content box-->
+               <!--content box--><!--end content box-->
                <!--social media-->
             </div>
          </div>
@@ -170,7 +148,7 @@
       <!-- Footer --> 
       <!--banner-->
       <div class="foot">
-         <img src="img/banner.png" alt="animals in banner"/> 
+         <img src="img/banner.png" alt="animals"/> 
       </div>
       <!--banner ends-->
       <footer>
@@ -198,3 +176,4 @@
       <script src="js/custom.js"></script> <!-- Custom JS -->
    </body>
 </html>
+

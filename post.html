@@ -47,7 +47,7 @@
                <div class="span3">
                   <!-- Logo starts -->
                   <div class="logo">
-                     <div class="logo-image"> <a href="indexpsvt.html"><img src="img/logofullcolor.png" alt="petsvingsVT"></a> </div>
+                     <div class="logo-image"> <a href="indexpsvt.html"><img src="img/logofullcolor.png" alt="petsavingsVT logo"/></a> </div>
                      <div class="clearfix"></div>
                   </div>
                   <!-- Logo ends -->
@@ -64,10 +64,10 @@
                               <!-- Sub Navigation -->
                               <ul id="ddsubmenu2" class="ddsubmenustyle">
                                  <li><a href="sb.html"><i class="icon-angle-right"></i>South Burlington</a></li>
-                                 <li><a href="williston.html"><i class="icon-angle-right"></i>Williston</a></li>
-                                 <li><a href="essex.html"><i class="icon-angle-right"></i>Essex</a></li>
-                                 <li><a href="colchester.html"><i class="icon-angle-right"></i>Colchester</a></li>
-                                 <li><a href="post.html"><i class="icon-angle-right bgreen"></i> &nbsp; &nbsp;Post a Deal!</a></li>
+                                 <li><a href="comingsoon.html"><i class="icon-angle-right"></i>Williston</a></li>
+                                 <li><a href="comingsoon.html"><i class="icon-angle-right"></i>Essex</a></li>
+                                 <li><a href="comingsoon.html"><i class="icon-angle-right"></i>Colchester</a></li>
+                                 <li><a href="post.html"><i class="icon-angle-right bgreen"></i> Post a Deal!</a></li>
                               </ul>
                            </li>
                            <!-- Main navigation -->
@@ -96,29 +96,37 @@
                <div class="span5">
                   <h2>Post a Deal!</h2>
                   <div class="form">
-                     <form enctype="multipart/form-data" class="form-horizontal">
+                     <form  action="deal.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                         <div class="control-group">
                            <label class="control-label" for="name">Name</label>
                            <div class="controls">
-                              <input type="text" class="input-large" id="name">
+                              <input type="text" class="input-large" name="name" id="name">
                            </div>
                         </div>
                         <div class="control-group">
                            <label class="control-label" for="Business Name">Business Name</label>
                            <div class="controls">
-                              <input type="text" class="input-large" id="email">
+                              <input type="text" class="input-large" name="business" id="bizname">
+                           </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="control-group">
+                           <label class="control-label" for="email">Email</label>
+                           <div class="controls">
+                              <input type="text" class="input-medium" name="email" id="email" placeholder="email address">
                            </div>
                         </div>
                         <div class="control-group">
                            <label class="control-label" for="deal">Deal</label>
                            <div class="controls">
-                              <textarea class="input-xlarge" id="comment" rows="3"></textarea>
+                              <textarea class="input-xlarge" id="comment" name="deal" rows="3"></textarea>
                            </div>
+                           
                         </div>
                         <div class="control-group">
-                           <label class="control-label" for="image">Upload an image</label>
+                           <label class="control-label" for="Image File Name"> Image File Name (If including)</label>
                            <div class="controls">
-                              <input name="Image" type="file">
+                              <input type="text" class="input-large" name="filename" id="filename" placeholder="e.g. wellnessfoodcan.jpg">
                            </div>
                         </div>
                         <div class="form-actions">
@@ -126,6 +134,20 @@
                            <button type="reset" class="btn btn-inverse">Reset</button>
                         </div>
                      </form>
+                     
+                     <h2>Need to upload an image? (optional)</h2>
+                     <p> jpg, png or gif files only. 20K max file</p>
+                     <form form action="getfile.php" method="post" enctype="multipart/form-data">
+                     <div class="control-group">
+                           <label class="control-label" for="image"></label>
+                           <div class="controls">
+                              <input name="file" type="file">
+                           </div>
+                        </div>
+                        <div class="form-actions">
+                           <button type="submit" class="btn btn-warning pull-left">Upload!</button>
+                        </div>
+                        </form>
                   </div>
                   <!--begin media  --><!--end media-->
                </div>
@@ -148,10 +170,10 @@
                   <div class="span12">
                      <h4>Find, Follow and Like!</h4>
                      <ul id="gallery_photos">
-                        <li><a href="http://linkedin.com/in/billmeirsrecruiter/"><img src="img/linkedin.gif" alt="Linkedin"></a></li>
-                        <li><a href="https://www.facebook.com/bmeirs"><img src="img/facebook.gif" alt="Facebook"></a></li>
-                        <li><a href="http://twitter.com/wgmeirs"><img src="img/twitter.gif" alt="Twitter"></a></li>
-                        <li><a href="https://plus.google.com/u/0/116834960053162148377/posts"><img src="img/google.gif" alt="Google"></a></li>
+                        <li><a href="http://linkedin.com/in/billmeirsrecruiter/"><img src="img/linkedin.gif" alt="Linkedin"/></a></li>
+                        <li><a href="https://www.facebook.com/bmeirs"><img src="img/facebook.gif" alt="Facebook"/></a></li>
+                        <li><a href="http://twitter.com/wgmeirs"><img src="img/twitter.gif" alt="Twitter"/></a></li>
+                        <li><a href="https://plus.google.com/u/0/116834960053162148377/posts"><img src="img/google.gif" alt="Google"/></a></li>
                      </ul>
                   </div>
                </div>
@@ -164,7 +186,7 @@
       <!-- Footer --> 
       <!--banner-->
       <div class="foot">
-         <img src="img/banner.png" alt="animals"> 
+         <img src="img/banner.png" alt="animals"/> 
       </div>
       <!--banner ends-->
       <footer>
