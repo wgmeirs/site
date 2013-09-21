@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Untitled Document</title>
@@ -40,7 +40,7 @@
     <?php } else { ?>
     <script language="javascript" type="text/javascript">
         alert('Message not sent. Please, notify the site administrator admin@admin.com');
-        window.location = 'post.html.html';
+        window.location = '/psvt staging folder/site/dealpost/bootstrap_form_pack/.html';
     </script>
     <?php
     }

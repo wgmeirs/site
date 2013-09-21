@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">Bootstrap Form Pack Documentation by Aenea</h3>
+		
+		<hr>
+		
+		<h1 class="center">Bootstrap Form Pack Pack</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>					By Aenea<br>
+					Email: <a href="mailto:info@beaenea.com">info@beaenea.com</a>
+				  </strong>
+			  </p>
+		  </div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing Bootstrap Form Pack. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/Aenea">here</a>. Thanks so much!</p>
+			</div>
+	  </div><!-- end div .borderTop -->
+		
+		<hr>
+		
+	  <h2 id="toc" class="alt">Table of Contents</h2>
+	  <ol class="alpha">
+        
+        	<li><a href="#Concept">Description</a></li>
+			<li><a href="#Installation">Installation</a></li>
+            <li><a href="#datepicker">Date Pickers</a></li>
+			<li><a href="#addnew">Add new fields</a></li>                        
+        	<li><a href="#validation">Validation &amp; upload limits</a></li>
+            <li><a href="#token">Token, the anticaptcha</a></li>
+            <li><a href="#credits">Sources</a></li>
+			
+			
+		</ol>
+		
+        
+        
+		<hr>
+		
+	  <h3 id="Concept"><strong>A - Description</strong> - <a href="#toc">top</a></h3>
+	  <p>This script Bootsrap Form Pack allows you to obtain a quick & easy forms for your website. You only need to put this script into any directory on  your hosting account, edit configuration file and give the link to your  customers.</p>
+<p>
+The pack has a set of solutions that allow you to create:<br />
+- Contact Form (3 forms)<br>
+- Booking / Event Form (2 forms)<br>
+- Upload file (2 forms)<br>
+- Newsletter subscribe form<br>
+- Register form  (2 forms)<br>
+- Login form<br>
+- Address form
+</p>
+
+<p>
+Demo 
+  <a href="http://www.beaenea.com/envato/codecanyon/bootstrap_form_pack/1_contact_form_1.php">http://www.beaenea.com/envato/codecanyon/bootstrap_form_pack/1_contact_form_1.php</a></p> 
+
+		<hr>
+
+	  <h3 id="Installation"><strong>B - Installation</strong> - <a href="#toc">top</a></h3>
+
+		<p>1- Select the form that you want to use. Open "config.php" (into /includes)and edit the values ​​that you want. </p>
+		<p>2- Upload the files (including the folders /includes and /js) on your server ... and you will be the form ready for use.</p>
+      <p>3- if you use the email log into the database, you'll have to use the file before anything install_mysql.php.</p>
+      <p>4-At the beginning of the file has to contain have the following:
+      <pre>&lt;?php 
+require_once "includes/config.php";		    
+require_once "includes/inc.formpack.php"; 	
+?&gt;</pre>
+      </p>
+      
+		  
+	   
+	  <br /><br />
+<hr>
+	  <h3 id="datepicker"><strong>C - Date Pickers</strong> - <a href="#toc">top</a></h3>
+
+		<p>The datepickers have the following options:</p>
+		
+		<table class="table table-bordered table-striped">
+		  <thead>
+		    <tr>
+		      <th style="width: 100px;">Name</th>
+		      <th style="width: 50px;">type</th>
+		      <th style="width: 100px;">default</th>
+		      <th>description</th>
+	        </tr>
+	      </thead>
+		  <tbody>
+		    <tr>
+		      <td>format</td>
+		      <td>string</td>
+		      <td>'mm/dd/yyyy'</td>
+		      <td>the date format, combination of  d, dd, m, mm, yy, yyy.</td>
+	        </tr>
+		    <tr>
+		      <td>weekStart</td>
+		      <td>integer</td>
+		      <td>0</td>
+		      <td>day of the week start. 0 for Sunday -  6 for Saturday</td>
+	        </tr>
+		    <tr>
+		      <td>startDate</td>
+		      <td>date</td>
+		      <td>null</td>
+		      <td>The earliest date that may be selected; all earlier dates will be disabled</td>
+	        </tr>
+		    <tr>
+		      <td>endDate</td>
+		      <td>date</td>
+		      <td>null</td>
+		      <td>The latest date that may be selected; all later dates will be disabled</td>
+	        </tr>
+		    <tr>
+		      <td>autoclose</td>
+		      <td>boolean</td>
+		      <td>false</td>
+		      <td>Whether or not to close the datepicker immediately when a date is selected</td>
+	        </tr>
+		    <tr>
+		      <td>startView</td>
+		      <td>string</td>
+		      <td>0, 'month'</td>
+		      <td>The view that the datepicker should show when it is opened. Accepts values of 0 or 'month' for month view (the default), 1 or 'year' for the 12-month overview, and 2 or 'decade' for the 10-year overview. Useful for date-of-birth datepickers</td>
+	        </tr>
+		    <tr>
+		      <td>keyboardNavigation</td>
+		      <td>boolean</td>
+		      <td>true</td>
+		      <td>Whether or not to allow date navigation by arrow keys</td>
+	        </tr>
+		    <tr>
+		      <td>language</td>
+		      <td>string</td>
+		      <td>en</td>
+		      <td>The two-letter code of the language to use for month and day names. These will also be used as the input's value (and subsequently sent to the server in the case of form submissions). Currently ships with English ('en'), German ('de'), Brazilian ('br'), and Spanish ('es') translations, but others can be added (see I18N below). If an unknown language code is given, English will be used</td>
+	        </tr>
+	      </tbody>
+	  </table>
+		<br /><br />
+<hr>
+
+
+<h3 id="addnew"><strong>D - Add new fields</strong> - <a href="#toc">top</a></h3>
+
+		<p>To add an extra field you only have to put the field inside the &lt;form&gt;
+		 automatically Bootstrap system Form Pack your cares and automatic process. <br />
+         It is important not to forget to put the property name and id.
+         <br>
+         such as: &lt;input type=&quot;text&quot; <strong>name=&quot;whatyouwan&quot;</strong> <strong>id=&quot;whatyouwan&quot;</strong>&gt;<br />
+        
+	  <hr>
+        
+	  <h3 id="validation"><strong>E - Validation</strong> - <a href="#toc">top</a></h3>
+
+		<p>To validate the fields just add the class <strong>validate[required]</strong><br>
+	  for email <strong>validate[required,custom[email]]</strong><br>
+	  for url <strong>validate[required,custom[url]]</strong><br>
+	  for phone <strong>validate[custom[phone]]</strong><br>
+	  for numbers <strong>validate[required,custom[onlyNumberSp]]</strong><br>
+	  for only letters <strong>validate[required,custom[onlyLetterSp]]</strong><br>
+	  for IP <strong>validate[required,custom[ipv4]]</strong><br />
+	  </p>
+        <p>The validation system pages has to contain:<br>
+      -Link to js and css
+      <pre>&lt;link rel="stylesheet" href="js/jQuery-Validation-Engine-master/css/validationEngine.jquery.css" type="text/css"/&gt;</pre>
+        <pre>&lt;script src="js/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-Validation-Engine-master/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;</pre>
+      -Validation init<br>
+      <pre>&lt;script&gt;
+jQuery(document).ready(function(){
+	jQuery("#form").validationEngine();
+	});
+&lt;/script&gt;</pre>
+      </p>
+        
+		
+      <p>
+      <h3>Uploads limitations Sizes &amp; Extensions</h3>
+      For size file limitations apply this into form tag ( where value its max size in bytes)</p>
+      <pre>&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;1000000&quot; /&gt; </pre>
+      
+      
+      <p><h3>Allowed types</h3>
+      In includes/inc.formpack.php in class formpack</p>
+      <pre>$upload-&gt;setAllowed( array('types'=&gt;array('png','jpg','gif','pdf','txt','doc')) ); // set extensions allowed</pre>
+      <hr>
+      
+	  <h3 id="token"><strong>F -  Token, the anticaptcha</strong> - <a href="#toc">top</a></h3>
+		
+	  <p>To fight spam using a system based on tokens.
+          <br>
+        Apply into form: <pre>&lt;?php echo formtoken::getField() ?&gt;</pre>
+        <br>
+        Validate
+        <pre>&lt;?
+if (formtoken::validateToken($_POST)) {
+// do send
+}
+?&gt;</pre><hr>
+	  <h3 id="credits"><strong>G -  Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Jquery validation engine <a href="https://github.com/posabsolute/jQuery-Validation-Engine" target="_blank">https://github.com/posabsolute/jQuery-Validation-Engine</a><br>
+        Eden PHP library <a href="http://www.eden-php.com/" target="_blank">http://www.eden-php.com/</a><br>
+        Date picker <a href="http://www.eyecon.ro/bootstrap-datepicker" target="_blank">http://www.eyecon.ro/bootstrap-datepicker</a><br>
+        PHP Mailer<a href="http://phpmailer.worxware.com/" target="_blank">http://phpmailer.worxware.com/</a>
+        </p>
+		</p>
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing Bootstrap Form Pack.  I'd be glad to help you if you have any questions relating to this. <br>
+	    No guarantees, but I'll do my best to assist.</p> 
+		
+		<p class="append-bottom alt large"><strong>Aenea</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+</div><!-- end div .container -->
+</body>
+</html>
