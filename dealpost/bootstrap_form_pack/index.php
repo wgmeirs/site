@@ -106,12 +106,12 @@ require_once "includes/inc.formpack.php";
                  <h2>Post a Deal!</h2>
                   <div class="form">
     <form action="send.php" method="post" enctype="multipart/form-data" id="form">
-          <label>Name*</label>
-          <input type="text" value="" class="span12 validate[required]" name="firstname" id="firstname" placeholder="First Name">	
+          <label>Name</label>
+          <input type="text" value="" class="span12 validate[required]" name="firstname" id="firstname" placeholder="Full Name">	
           <label>Business Name</label>
-          <input type="text" value=""   class="span12" name="lasnamename" id="lasnamename" placeholder="Last Name">
+          <input type="text" value=""   class="span12" name="lasnamename" id="lasnamename" placeholder="Business Name">
           <label>Email</label>
-          <input type="text" value="" class="span12" classname="email" id="email" placeholder="Email">
+          <input type="text" value="" class="span12" classname="email" id="email" placeholder="e.g. yourname@yourdomain.com">
           <label>Deal</label>
           <textarea rows="3" class="span12" name="comments" id="comments" value=""></textarea>
           <label>Upload file</label>

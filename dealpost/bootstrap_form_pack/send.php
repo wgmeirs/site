@@ -82,7 +82,7 @@ require_once "includes/inc.eden.php";  		// eden PHP library
 					// then send ...
 					if ( $cansend ) { 
 								if ( $mail->Send() ){
-									echo ("<h2>Thanks!</h2>"); 
+									echo ("<p>Thanks for your post. We will review for standards control and post if approved!</p>"); 
 									} else {
 									echo ("<h2>Error Message could not be sent. </h2>" . $mail->ErrorInfo );  
 									}  
